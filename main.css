@@ -1,0 +1,149 @@
+/* set everything in box-model to zero*/
+html,
+body,
+header,
+div,
+h3,
+p,
+main,
+nav,
+ul,
+li {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/*Homepage as seen at 1400px wide*/
+body {
+  max-width: 1400px;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+/*change color for header*/
+header {
+  display: block;
+  background-color: darkblue;
+  height: 50px;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+/*for hamburger.png*/
+.left {
+  width: 5%;
+  height: 100%;
+  float: left;
+}
+/*for paddlie-white.png*/
+.right {
+  width: 5%;
+  height: 100%;
+  float: right;
+}
+
+/*hamburger.png, title, paddle-white.png inline*/
+header > h1 {
+  display: inline-block;
+  text-align: center;
+  width: 85%;
+  color: white;
+  margin-top: 5px;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+/*navigation bar without bulletin points*/
+nav > ul {
+  margin-top: 0px;
+  list-style-type: none;
+  padding-left: 0;
+}
+nav > ul > li {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+nav > ul > li > a {
+  color: white;
+}
+
+/*navigation shadow*/
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 18%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top layer */
+  top: 50px;
+  background-color: darkblue;
+  /*overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 5px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 100px;
+  color: darkblue;
+}
+
+/*main content, including the image must get no wider than 1200px*/
+main {
+  position: relative;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1;
+}
+
+/*words on the image*/
+.centered {
+  position: absolute;
+  color: white;
+  text-align: center;
+  left: 50%;
+  font-size: 60px;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  margin: 10px 0px 0px 0px;
+  color: black;
+}
+
+/*Halifax and Symdey*/
+.green {
+  color: darkgreen;
+  text-decoration-line: underline;
+  margin-bottom: 10px;
+}
+
+/*
+Responsive Desing for
+(1) Below 1200px the main content must be 100% across the screen
+(2) Below 800px all font sizes must change
+*/
+@media screen and (max-width: 1200px) {
+  header,
+  main {
+    width: 100%; /* Below 1200px the main content must be 100% across the screen */
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 80%;
+  }
+  .centered {
+    font-size: 48px;
+  }
+}
